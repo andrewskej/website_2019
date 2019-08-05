@@ -6,7 +6,7 @@ export default {
         `/images/skills_dev/reactjs.jpg`,
         `/images/skills_dev/nodejs.png`,
         `/images/skills_dev/mysql.jpg`,
-        `/images/skills_dev/mariaDB.png`,
+        `/images/skills_dev/mariadb.png`,
         `/images/skills_dev/aws.png`,
         `/images/skills_dev/firebase.png`,
         `/images/skills_dev/git.png`,
