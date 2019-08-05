@@ -33,6 +33,6 @@ app.use('/build', express.static('build'))
 app.use('/images', express.static('images'))   //I always forget this... c'mon man
 app.use('/uploads', express.static('uploads'))
 
-http.Server(app).listen(port=3001, ()=>{
+http.Server(app).listen(port=3000, ()=>{
     console.log(`Server on ${port}`)
 })
