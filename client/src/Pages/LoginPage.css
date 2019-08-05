@@ -1,0 +1,113 @@
+.loginMain{
+    height:800px;
+    background:orangered;
+}
+
+
+.headerBar{
+    background:navy;
+    height:35px;
+}
+
+
+.navTab{
+    display:flex;
+    width:160px;
+    height:40px;
+    border-top-left-radius: 0.8rem;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    line-height:2.5rem;
+}
+
+
+.loginTab{
+    flex:1;
+    border-top-left-radius: 0.8rem;
+    background:green;
+}
+
+.joinTab{
+    flex:1;
+    border-top-left-radius: 0.8rem;
+    background:blue;
+}
+
+.loginWindow{
+    width:460px;
+    padding:120px;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+
+.loginWindow .loginInputs{
+    background:lightgreen;
+    border: solid 2px green;
+    border-top-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+}
+
+.loginWindow .joinInputs{
+    background:lightskyblue;
+    border: solid 2px blue;
+    border-top-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+}
+
+.loginWindow .joinInputs span{
+    display:block;
+    text-indent:25px;
+}
+
+.loginWindow input{
+    border:solid 1px black;
+    width:420px;
+    height:35px;
+    margin:15px;
+    font-size:20px;
+    text-indent:10px;
+}
+
+/* .loginWindow .loginConfirm, .joinConfirm{
+    background: midnightblue;
+    margin-left: 368px;
+    width: 88px;
+    height: 44px;
+    font-size: 20px;
+    color: cornsilk;
+    border: none;
+} */
+
+.loginWindow .loginConfirm, .joinConfirm{
+    background: midnightblue;
+    margin-left: 177px;
+    width: 88px;
+    height: 46px;
+    font-size: 20px;
+    color: cornsilk;
+    border: none;
+}
+
+.loginWindow .joinConfirm{
+    margin-left:347px;
+    height: 44px;
+}
+
+.loginWindow .noLogin{
+    background:red;
+    margin-left:11px;
+    width:160px;
+    height:44px;
+    border:none;
+}
+
+.noLogin a {
+    text-decoration:none;
+    font-size:17px;
+    color:cornsilk;
+}

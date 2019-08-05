@@ -1,0 +1,367 @@
+
+.overall{
+    margin: 2% 10% 2%;
+}
+
+.myName{
+    margin:5%;
+    padding-bottom:5%;
+    text-align: center;
+    font-size:5vw;
+    font-weight:bold;
+    border-bottom: solid 3px #ED553B;
+}
+
+
+.router{
+    display:flex;
+    line-height:5vw;
+    font-size:2vw;
+    margin:5%;
+    margin-left:10%;
+    text-align:center;
+    font-weight:bold;
+}
+
+.router div{
+    width:10vw;
+    height:5vw;
+    border-top-right-radius: 45%;
+}
+
+.router div:hover{
+    font-size:2.5vw;
+}
+
+
+.router_bio, .bio{
+    background:lightseagreen;
+}
+
+.router_chrono, .chrono{
+    background:lightskyblue;
+}
+
+.router_CV, .cv{
+    background:coral;
+}
+
+.router_works, .works{
+    background:#F6D55C;
+}
+
+.router_contact, .contact{
+    background:#ED553B;
+}
+
+
+.bio, .chrono, .cv, .works, .contact{
+    margin:10%;
+    margin-top:-5%;
+    padding:1%;
+    border-top:solid 3px black;
+}
+
+/* bio */
+.bio .profile{
+    background:beige;
+}
+
+.bio .profile, .bio .skills{
+    border:solid 2px black;
+    padding:5%;
+    margin:1%;
+}
+
+.bio .profile .title{
+    font-size:2vw;
+    font-weight:bold;
+}
+
+.bio .profile .facts{
+    font-size:1.2vw;
+}
+
+.bio .profile .facts .keyword{
+    color:black;
+    font-size:1.4vw;
+    font-weight:bold;
+}
+
+.bio .profile .facts a{
+    text-decoration:none;
+}
+/* bio */
+
+
+/* chrono */
+.events{
+    position:relative;
+    display:flex;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.summary{
+    /* width:25%; */
+    width:35%;
+    padding-left:5%;
+    text-align:right;
+}
+
+.company_name{
+    padding-top:3%;
+    font-size:2vw;
+    font-weight:bold;
+}
+
+.company_name a{
+    color:black;
+    text-decoration:none;
+}
+
+.company_place{
+    padding-top:3%;
+    font-size:1.8vw;
+    font-style:italic;
+}
+
+.company_period{
+    padding-top:1%;
+    font-size:1.8vw;
+}
+
+
+.draw{
+    width:15%;
+    position:relative;
+    padding-left:3%;
+    padding-right:3%;
+}
+
+.draw_circle{
+    background:white;
+    margin-top:10%;
+    padding:10%;
+    border:solid 5px #ED553B;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    color:#ED553B;
+    font-size:2.5vw;
+    font-weight:bold;
+    text-align:center;
+    z-index:100;
+}
+
+.draw_line{
+    background:#ED553B;
+    position:absolute;
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius:100%;
+    width:5%;
+    height:100%;
+    margin-top:-1%;
+    margin-bottom:30%;
+    left:49%;
+}
+
+.jobData{
+    width:40%;
+}
+
+.job_title{
+    padding-top:2%;
+    font-size:2vw;
+    font-weight:bold;
+}
+.job_desc{
+    padding-top:2%;
+    padding-left:3%;
+    font-size:1.5vw;
+    text-indent:-2vw;
+}
+
+/* chrono */
+
+/* cv */
+.cv{
+    padding:2%;
+}
+
+.cv_subtitle{
+    font-size:2.5vw;
+    font-weight:bolder;
+    background:maroon;
+    color:beige;
+}
+
+.cv .cv_exp, .cv_skills{
+    padding:5%;
+    background:lightgoldenrodyellow;
+    border:solid 1px orange;
+    margin-top:2.5%;
+    margin-bottom:2.5%;
+    font-size:2vw;
+
+}
+
+
+.cv .cv_skills li{
+    display:inline-flex;
+    width:10%;
+    margin:2%;
+}
+
+.cv_skill img{
+    width:6vw;
+    height:6vw;
+}
+
+.cv .cv_work {
+    border:solid 1px lightgray;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+
+.cv .cv_work_basicInfo, .cv_work_addInfo{
+    display:flex;
+    background:lightblue;
+    font-weight:bold; 
+    font-size:1.75vw;
+}
+
+.cv .cv_work_addInfo{
+    background:none;
+}
+
+.cv .cv_work_period, .cv_work_location{
+    position:absolute;
+    right:23%;
+}
+
+.cv .cv_work_desc{
+    list-style: none;
+    font-size:1.7vw;
+    margin-left:1%;
+    margin-top:1%;
+}
+
+/* cv */
+
+/* works */
+.works{
+    padding:5%;
+}
+
+.works .work{
+    background:lemonchiffon;
+    margin:5%;
+}
+
+.works .work_imgLink{
+    background:orange;
+    padding:5%;
+    position: relative;
+}
+
+.works img{
+    width:100%;
+    height:100%;
+}
+
+.works .work_shortDesc{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0%;
+    left:0%;
+    background:rgb(2, 2, 58);
+    opacity:0;
+}
+
+.works .work_shortDesc:hover{
+    opacity:0.8;
+}
+
+.works .work_shortDesc span{
+    position:absolute;
+    left:0%;
+    padding:5%;
+    color:beige;
+    font-size:3vw;
+    font-weight:bold;
+}
+
+.work_shortDesc .desc_title{
+    top:1%;
+    width:40%;
+    border-bottom:solid 2px beige;
+}
+
+.work_shortDesc .desc_desc{
+    top:25%;
+}
+
+.work_shortDesc .desc_skills{
+    top:60%;
+}
+
+
+/* contact */
+
+.contact img{
+    width:75px;
+    height:75px;
+    /* background:white; */
+    /* border:solid 5px #ED553B; */
+}
+
+.links{
+    display:flex;
+    justify-content: space-around;
+    border-top:solid 3px #ED553B;
+    padding-top:3%;
+    margin:5%;
+     /* padding:5%; */
+    /* padding-top:2.5%; */
+    /* line-height:5vw; */
+}
+
+.links img{
+    width:8vw;
+    height:8vw;
+    background:white;
+}
+
+.contactInfo{
+    font-size:2vw;
+    text-align:center;
+}
+
+/* .email{
+    padding:5%;
+    background:orangeRed;
+}
+
+.email .contactInfo{
+    margin-bottom:0.5%;
+}
+
+.email .contactInfo input{
+    margin-right:1.5%;
+    width:50%;
+    text-indent:3vw;
+}
+
+.email .emailContents{
+    /* width:250px; */
+    /* width:90%;
+    padding:5%;
+} 
+
+.email .send{
+    width:100%;
+    font-size:3vw;
+} 
+
+/* contact */

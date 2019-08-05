@@ -1,0 +1,94 @@
+.mainFrame{
+    border:solid 1px lightgray;
+    background:lightcyan;
+}
+
+.headerBar{
+    background:navy;
+    height:35px;
+}
+
+.contents{
+    display:flex;
+    height:1024px;
+    background:orange;
+}
+
+.leftMenu{
+    flex:1.8;
+    border:solid 1px black;
+    background:yellow;
+}
+
+/*  */
+.centerContent{
+    flex:5.5;
+    border:solid 1px black;
+    background:green;
+}
+
+.centerContent .create{
+    /* position:fixed; */
+    background:orange;
+    border:solid 1px black;
+    margin:10px;
+}
+
+.centerContent .createHead{
+    text-align:center;
+    line-height:2.5rem;
+}
+
+.centerContent .whatDoYouThink {
+    display:flex;
+    height:80px;
+}
+
+.centerContent .whatDoYouThink .myPhoto{
+    border:solid 1px black;
+    flex:1.5;
+    margin:2%;
+}
+
+.centerContent .whatDoYouThink input {
+    flex:5;
+    margin:2%;
+}
+
+.centerContent .whatDoYouThink .submit{
+    flex:1;
+    margin:2%;
+
+}
+
+.centerContent .createBottom {
+    display:flex;
+    justify-content:space-around;
+}
+
+.centerContent .attachFile {
+    margin:2%;
+    border:solid 1px black;
+    height:150px;
+    background:lightgray;
+}
+
+.centerContent .board{
+    border:solid 1px black;
+    margin:10px;
+    margin-top:25px;
+    background:orangered;
+}
+
+.centerContent li {
+    
+}
+
+/*  */
+
+
+.rightContacts{
+    flex:2;
+    border:solid 1px black;
+    background:purple;
+}
