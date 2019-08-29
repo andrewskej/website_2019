@@ -7,7 +7,7 @@ const fullDataSet = {
         github:'http://www.github.com/andrewskej',
         email:'andrewskej@gmail.com',
         address:'blahblah, Montreal, QC',
-        phone:'123-456-789'
+        phone:'438-866-5241'
     },
 
     bio:{
