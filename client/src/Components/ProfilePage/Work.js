@@ -4,7 +4,6 @@ export default class Work extends Component {
     
     render() {
         const {worked} = this.props
-
         return (
             <div className="work">
                 <div className="work_imgLink">

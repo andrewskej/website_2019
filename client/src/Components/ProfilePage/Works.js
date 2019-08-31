@@ -5,13 +5,13 @@ import Work from './Work.js';
 export default class Works extends Component {
 
     render() {
-        const {enm, hellonature, etc} = works
+        const cpNames = Object.keys(works)
+        const exp = []
+        exp.push(...cpNames.map(cp => works[cp]))
 
         return (
             <div className="works">
-                <Work worked={enm}/>
-                <Work worked={hellonature}/>
-                <Work worked={etc}/>
+                {exp.map(cp => <Work worked={cp}/>)}
             </div>
         )
     }

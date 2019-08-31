@@ -12,23 +12,16 @@ export default class CV extends Component {
     }
 
 
-    componentDidMount(){
+    componentDidMount (){
         this.getData('edu')
         this.getData('work')
+
         this.getSkill('computer')
         this.getSkill('language')
         this.getSkill(`others`)
     }
 
-
-    getSkill = (type) => {
-        const skillSet = skills[type]
-
-        this.setState({
-            [type]:skillSet
-        })
-    }
-
+//여기도 좀더 추상화 가능할듯
 
     getData = (type) => {
         const yearSet = Object.keys(data).reverse()
@@ -41,6 +34,15 @@ export default class CV extends Component {
             [type]:dataBox
         })
     }
+
+    getSkill = (type) => {
+        const skillSet = skills[type]
+
+        this.setState({
+            [type]:skillSet
+        })
+    }
+
 
     render() {
 
