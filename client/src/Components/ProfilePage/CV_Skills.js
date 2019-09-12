@@ -3,11 +3,11 @@ import React, { Component } from 'react'
 export default class CV_Skills extends Component {
     render() {
         return (
-            <div className="cv_skills">
-                <div className="cv_subtitle">{this.props.title}</div>
-                <div classname="cv_skillsList">
+            <div className="cv__skills">
+                <div className="cv__skills__subtitle">{this.props.title}</div>
+                <div classname="cv__skills__skillsList">
                     {this.props.data && this.props.data.map((skillImgPath,i) => 
-                        <li key={i} className="cv_skill">
+                        <li key={i} className="cv__skills__skillsList__skill">
                             <img src={skillImgPath} alt={skillImgPath.split('/skills_dev/')[1]}/>
                         </li> 
                     )}

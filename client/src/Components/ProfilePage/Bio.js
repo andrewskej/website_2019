@@ -19,15 +19,15 @@ export default class Bio extends Component {
     render() {
         return (
             <div className="bio">
-                <div className="profile"> 
-                    <div className="title">
+                <div className="bio__profile"> 
+                    <div className="bio__profile__title">
                         {this.state.facts.length} facts about me 
                     </div>
 
-                    <div className="facts">
+                    <div className="bio__facts">
                         {this.state.facts && this.state.facts.map(fact => 
                             <li style={{listStyle:'none'}}>
-                                {fact.split(':')[0]} <span className="keyword">{fact.split(':')[1]}</span>
+                                {fact.split(':')[0]} <span className="bio__facts__keyword">{fact.split(':')[1]}</span>
                             </li>
                         )}
                     </div>

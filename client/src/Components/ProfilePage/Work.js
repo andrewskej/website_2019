@@ -5,16 +5,16 @@ export default class Work extends Component {
     render() {
         const {worked} = this.props
         return (
-            <div className="work">
-                <div className="work_imgLink">
+            <div className="works__work">
+                <div className="works__work__imgLink">
                 {worked 
                     ? 
-                    <a className="work_imgLink_link" target="_blank" rel="noopener noreferrer" href={worked.links}>
-                        <img className="work_imgLink_img" src={worked.thumbnail} alt="thumbnail"/>
-                        <div className="work_shortDesc">
-                            <span className="desc_title">{worked.title}</span>
-                            <span className="desc_desc">{worked.desc}</span>
-                            <span className="desc_skills">{worked.skills}</span>
+                    <a className="works__work__imgLink__link" target="_blank" rel="noopener noreferrer" href={worked.links}>
+                        <img className="works__work__imgLink__img" src={worked.thumbnail} alt="thumbnail"/>
+                        <div className="works__work__imgLink__shortDesc">
+                            <span className="works__work__imgLink__shortDesc__title">{worked.title}</span>
+                            <span className="works__work__imgLink__shortDesc__desc">{worked.desc}</span>
+                            <span className="works__work__imgLink__shortDesc__skills">{worked.skills}</span>
                         </div>
                     </a>
                     :

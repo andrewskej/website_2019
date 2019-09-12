@@ -7,7 +7,8 @@ const {Provider, Consumer:ProfileConsumer} = Context;
 
 class ProfileProvider extends Component {
     state={
-        mode:'bio',
+        // mode:'bio',
+        mode:'CV',
         contact:'',
         yearSet:[],
        
@@ -21,26 +22,24 @@ class ProfileProvider extends Component {
 
         event: (year) => {
             return (
-                <div className="sheet">
+                <div className="chrono__sheet">
                     {data[year].map((career, i)=>(
-                        <div className="events" key = {i}>
+                        <div className="chrono__events" key = {i}>
                     
-                        <div className="summary">
-                            <div className="companyData">
-                                <div className="company_name"><a href={career.link}>{career.title}</a></div>
-                                <div className="company_place">{career.where}</div>
-                                <div className="company_period">{career.from} - {career.to}</div>
-                            </div>
+                        <div className="chrono__company">
+                            <div className="chrono__company__name"><a href={career.link}>{career.title}</a></div>
+                            <div className="chrono__company__place">{career.where}</div>
+                            <div className="chrono__company__period">{career.from} - {career.to}</div>
                         </div>
 
-                        <div className="draw">
-                            <div className="draw_circle">{year}</div>
-                            <div className="draw_line"/>
+                        <div className="chrono__draw">
+                            <div className="chrono__draw__circle">{year}</div>
+                            <div className="chrono__draw__line"/>
                         </div>
 
-                        <div className="jobData">
-                            <div className="job_title">{career.subTitle}</div>
-                            <div className="job_desc">{career.desc.map(line => <li>{line}</li>)}</div>
+                        <div className="chrono__job">
+                            <div className="chrono__job__title">{career.subTitle}</div>
+                            <div className="chrono__job__desc">{career.desc.map(line => <li>{line}</li>)}</div>
                         </div>
 
                         </div>

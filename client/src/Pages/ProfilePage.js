@@ -16,17 +16,18 @@ export default class ProfilePage extends Component {
                 <ProfileConsumer>
                     {({state,actions})=> (
 
-                        <div className="overall">
+                        <div className="mainframe">
                             <div className="myName">
                                 <span>You sik Jeon</span>
                             </div>
 
                             <div className="router">
-                                <div className="router_bio" onClick={()=> actions.viewMode('bio')}>Bio</div>
-                                <div className="router_chrono" onClick={()=> actions.viewMode('chrono')}>Chrono</div>
-                                <div className="router_CV" onClick={()=> actions.viewMode('CV')}>CV</div>
-                                <div className="router_works" onClick={()=> actions.viewMode('works')}>Works</div>
+                                <div className="router__bio" onClick={()=> actions.viewMode('bio')}>Bio</div>
+                                <div className="router__chrono" onClick={()=> actions.viewMode('chrono')}>Chrono</div>
+                                <div className="router__CV" onClick={()=> actions.viewMode('CV')}>CV</div>
+                                <div className="router__works" onClick={()=> actions.viewMode('works')}>Works</div>
                             </div>
+
 
                             {state.mode === 'bio' && <Bio/> }
                             {state.mode === 'chrono' && <Chrono/> }
@@ -34,20 +35,20 @@ export default class ProfilePage extends Component {
                             {state.mode === 'works' && <Works/> }
 
 
-                            <div className = 'links'>
-                                <div className="linkUrl">
+                            <div className = 'contact'>
+                                <div className="contact__linkUrl">
                                     <a target="_blank" href={state.contact.linkedin}>
                                         <img src="/images/contact/linkedin.png" alt="linkedIn icon"/>
                                     </a>
                                 </div>
 
-                                <div className="contactInfo">
+                                <div className="contact__info">
                                     <div>{state.contact.email}</div>
                                     <div>{state.contact.phone}</div>
                                     <div>{state.contact.address}</div>
                                 </div>
 
-                                <div className="linkUrl">
+                                <div className="contact__linkUrl">
                                     <a target="_blank" href={state.contact.github}>
                                         <img src="/images/contact/github.png" alt="github icon"/>
                                     </a>
