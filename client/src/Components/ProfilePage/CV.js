@@ -2,46 +2,37 @@ import React, { Component } from 'react'
 import { ProfileConsumer } from '../../Contexts/ProfileStore';
 import data from '../../Data/data.js'
 import skills from '../../Data/skills.js'
-import CV_Skills from './CV_Skills';
-import CV_exp from './CV_exp';
+import CvSkills from './CvSkills';
+import CvExp from './CvExp';
 export default class CV extends Component {
 
-
-    state = {
-
-    }
-
+    state = {}
 
     componentDidMount (){
-        this.getData('edu')
-        this.getData('work')
-
-        this.getSkill('computer')
-        this.getSkill('language')
-        this.getSkill(`others`)
+        ['edu','work','computer','language','others'].map(section => 
+            this.getData(section)
+        )
     }
 
-//여기도 좀더 추상화 가능할듯
 
     getData = (type) => {
-        const yearSet = Object.keys(data).reverse()
-        const yearDataSet = yearSet.map(yr => data[yr].filter(info=>info.type === type))
-        const dataSet =  yearDataSet.filter(el => el.length > 0)
-        const dataBox = []
-        dataSet.forEach(el => dataBox.push(...el))
+        let dataBox = []
+
+        if(['edu', 'work'].includes(type)){
+            const yearSet = Object.keys(data).reverse()
+            const yearDataSet = yearSet.map(yr => data[yr].filter(info => info.type === type))
+            const dataSet =  yearDataSet.filter(el => el.length > 0)
+            dataSet.forEach(el => dataBox.push(...el))
+        }else{
+            dataBox = skills[type]
+        }
 
         this.setState({
             [type]:dataBox
         })
     }
 
-    getSkill = (type) => {
-        const skillSet = skills[type]
 
-        this.setState({
-            [type]:skillSet
-        })
-    }
 
 
     render() {
@@ -50,10 +41,10 @@ export default class CV extends Component {
             <ProfileConsumer>
                 {({state,actions})=> (
                     <div className="cv">
-                        <CV_exp title="work experience" data={this.state.work}/>
-                        <CV_exp title="education" data={this.state.edu}/>
-                        <CV_Skills title="skills-computer" data={this.state.computer}/>
-                        <CV_Skills title="skills-language" data={this.state.language}/>
+                        <CvExp title="work experience" data={this.state.work}/>
+                        <CvExp title="education" data={this.state.edu}/>
+                        <CvSkills title="skills-computer" data={this.state.computer}/>
+                        <CvSkills title="skills-language" data={this.state.language}/>
                     </div>
                 )}
             </ProfileConsumer>

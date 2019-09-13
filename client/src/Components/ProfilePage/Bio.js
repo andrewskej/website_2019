@@ -25,8 +25,8 @@ export default class Bio extends Component {
                     </div>
 
                     <div className="bio__facts">
-                        {this.state.facts && this.state.facts.map(fact => 
-                            <li style={{listStyle:'none'}}>
+                        {this.state.facts && this.state.facts.map((fact,i) => 
+                            <li key={i} style={{listStyle:'none'}}>
                                 {fact.split(':')[0]} <span className="bio__facts__keyword">{fact.split(':')[1]}</span>
                             </li>
                         )}

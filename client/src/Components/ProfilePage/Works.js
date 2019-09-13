@@ -11,7 +11,7 @@ export default class Works extends Component {
 
         return (
             <div className="works">
-                {exp.map(cp => <Work worked={cp}/>)}
+                {exp.map((cp,i) => <Work key={i} worked={cp}/>)}
             </div>
         )
     }

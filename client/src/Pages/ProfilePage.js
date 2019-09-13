@@ -9,6 +9,7 @@ import { ProfileProvider, ProfileConsumer } from '../Contexts/ProfileStore';
 
 export default class ProfilePage extends Component {
 
+    
     render() {
 
         return (
@@ -28,16 +29,14 @@ export default class ProfilePage extends Component {
                                 <div className="router__works" onClick={()=> actions.viewMode('works')}>Works</div>
                             </div>
 
-
                             {state.mode === 'bio' && <Bio/> }
                             {state.mode === 'chrono' && <Chrono/> }
                             {state.mode === 'CV' && <CV/> }
                             {state.mode === 'works' && <Works/> }
 
-
                             <div className = 'contact'>
                                 <div className="contact__linkUrl">
-                                    <a target="_blank" href={state.contact.linkedin}>
+                                    <a target="_blank" rel="noopener noreferrer" href={state.contact.linkedin}>
                                         <img src="/images/contact/linkedin.png" alt="linkedIn icon"/>
                                     </a>
                                 </div>
@@ -49,12 +48,11 @@ export default class ProfilePage extends Component {
                                 </div>
 
                                 <div className="contact__linkUrl">
-                                    <a target="_blank" href={state.contact.github}>
+                                    <a target="_blank" rel="noopener noreferrer" href={state.contact.github}>
                                         <img src="/images/contact/github.png" alt="github icon"/>
                                     </a>
                                 </div>
                             </div>
-
 
                         </div>
                     )}

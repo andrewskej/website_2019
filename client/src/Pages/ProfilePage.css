@@ -266,11 +266,11 @@
     top:0%;
     left:0%;
     background:rgb(2, 2, 58);
-    opacity:0;
+    opacity:0.8;
 }
 
 .works__work__imgLink__shortDesc:hover{
-    opacity:0.8;
+    opacity:0;
 }
 
 .works__work__imgLink__shortDesc span{

@@ -18,29 +18,30 @@ class ProfileProvider extends Component {
     actions={
         viewMode: (mode) => {
             this.setState({mode})
+            // const showThis = mode.toUpperCase()
         },
 
         event: (year) => {
             return (
-                <div className="chrono__sheet">
-                    {data[year].map((career, i)=>(
-                        <div className="chrono__events" key = {i}>
+                <div className="chrono__items" key={year}>
+                    {data[year].map((career)=>(
+                        <div className="chrono__events" key={career.link}>
                     
-                        <div className="chrono__company">
-                            <div className="chrono__company__name"><a href={career.link}>{career.title}</a></div>
-                            <div className="chrono__company__place">{career.where}</div>
-                            <div className="chrono__company__period">{career.from} - {career.to}</div>
-                        </div>
+                            <div className="chrono__company">
+                                <div className="chrono__company__name"><a href={career.link}>{career.title}</a></div>
+                                <div className="chrono__company__place">{career.where}</div>
+                                <div className="chrono__company__period">{career.from} - {career.to}</div>
+                            </div>
 
-                        <div className="chrono__draw">
-                            <div className="chrono__draw__circle">{year}</div>
-                            <div className="chrono__draw__line"/>
-                        </div>
+                            <div className="chrono__draw">
+                                <div className="chrono__draw__circle">{year}</div>
+                                <div className="chrono__draw__line"/>
+                            </div>
 
-                        <div className="chrono__job">
-                            <div className="chrono__job__title">{career.subTitle}</div>
-                            <div className="chrono__job__desc">{career.desc.map(line => <li>{line}</li>)}</div>
-                        </div>
+                            <div className="chrono__job">
+                                <div className="chrono__job__title">{career.subTitle}</div>
+                                <div className="chrono__job__desc">{career.desc.map((line,i) => <li key={i}>{line}</li>)}</div>
+                            </div>
 
                         </div>
                         )
@@ -59,10 +60,8 @@ class ProfileProvider extends Component {
         const {career, bio, contact, skills, works} = fullDataSet
         //fullDataSet 으로 바꾸는게 좋을까? 개별 데이터를 가지는게 나을까?
 
-
-        // let yearSet = Object.keys(data).reverse()
         let yearSet = Object.keys(career).reverse()
-        this.setState({ yearSet, contact, career, bio, contact, skills, works })
+        this.setState({ yearSet, contact, career, bio, skills, works })
     }
 
 
