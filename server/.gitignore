@@ -2,4 +2,3 @@
 /.pnp
 .pnp.js
 /routes/dbconn.js
-/routes/mail.js

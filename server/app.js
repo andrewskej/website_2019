@@ -23,12 +23,12 @@ app.use((req,res,next)=>{
 
 const indexRouter = require('./routes/index')
 const apiRouter = require('./routes/api')
-const mailRouter = require('./routes/mail')
+// const mailRouter = require('./routes/mail')
 
 
 app.use('/', indexRouter)
 app.use('/api', apiRouter)
-app.use('/mail', mailRouter)
+// app.use('/mail', mailRouter)
 app.use('/build', express.static('build'))
 app.use('/images', express.static('images'))   //I always forget this... c'mon man
 app.use('/uploads', express.static('uploads'))
