@@ -9,7 +9,7 @@ export default {
         `- I feel comfortable using : react.js, jQuery, node.js`,
         `- I feel a bit frustrated doing : colors, layouts, animations `,
         `- I experienced two extreme environment : google korea and military service`,
-        `- I am also interested in adding these to my skill set : react native, electron, python, kotlin`,
+        `- I am also interested in adding these to my skill set : react native, electron, python`,
     ]
 //keyword separated by right side of : to be highlighted
 }
