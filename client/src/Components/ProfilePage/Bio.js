@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import bio from '../../Data/bio.js'
+import fullDataSet from '../../Data/fullDataSet.js'
 
 export default class Bio extends Component {
 
@@ -8,6 +8,7 @@ export default class Bio extends Component {
     }
 
     componentDidMount(){
+        const {bio} = fullDataSet
         const {facts} = bio
  
         this.setState({

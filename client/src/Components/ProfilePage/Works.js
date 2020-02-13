@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import works from '../../Data/works.js'
+import fullDataSet from '../../Data/fullDataSet';
 import Work from './Work.js';
 
 export default class Works extends Component {
 
     render() {
+        const {works} = fullDataSet;
         const cpNames = Object.keys(works)
         const exp = []
         exp.push(...cpNames.map(cp => works[cp]))

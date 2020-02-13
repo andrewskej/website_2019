@@ -7,7 +7,7 @@ export default class Chrono extends Component {
             <ProfileConsumer>
                 {({state,actions})=>(
                     <div className="chrono">
-                        { state.yearSet.map(year => actions.event(year)).reverse() }
+                        { state.yearSet.reverse().map(year => actions.event(year)).reverse() }
                     </div>
                 )}
             </ProfileConsumer>

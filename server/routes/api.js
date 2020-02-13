@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const path = require('path')
-const dbConn = require('./dbconn.js')
-const db = dbConn.connection
+// const dbConn = require('./dbconn.js')
+// const db = dbConn.connection
 
 router.get('/allThreads', getAllThreads)
 router.get('/read/:seq', readThread)

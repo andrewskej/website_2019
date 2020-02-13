@@ -6,21 +6,20 @@ const fullDataSet = {
         linkedin:'https://www.linkedin.com/in/yousik-andrew-jeon-b02ab389',
         github:'http://www.github.com/andrewskej',
         email:'andrewskej@gmail.com',
-        address:'4407 Rue Bossuet, Montreal, QC',
+        address:'235 rue peel, Montreal, QC',
         phone:'438-866-5241'
     },
 
     bio:{
         facts:[
-            `- I am former : Account Executive in advertising field`,
-            `- I survived in : 1 planet, 3 continents, 5 countries, 9 cities in past 15 years`,  
-            `- I speak high level : English, Japanese, Korean , mid level French`,
+            `- I was : Account Executive in advertising field`,
+            `- I speak : English, French, Japanese, Korean`,
+            `- I lived in : 1 planet, 3 continents, 5 countries, 9 cities`,  
             `- I refresh myself by : climbing walls or rolling on mat`, 
-            `- I would define myself a : Junior Javascript web developer`,
-            `- I feel comfortable using : react.js, jQuery, node.js`,
-            `- I feel a bit frustrated doing : colors, layouts, animations `,
-            `- I experienced two extreme environment : google korea and military service`,
-            `- I am also interested in adding these to my skill set : react native, electron, python, kotlin`,
+            `- I am walking a path to : a Fullstack Javascript developer`,
+            `- I feel comfortable mainly with : Javascript family [React.js, jQuery, node.js, ES6, +a]`,
+            `- I am also interested in : AI, Fintech, python, etc.`,
+            `- I survived from two extreme environment : google korea and military service`,
         ]
     },
 
@@ -123,7 +122,18 @@ const fullDataSet = {
             to:`May 2019`,
             type:'work',
             desc: [`Slack Bot by Node.js for internal communication tool development`, `Admin page by Node.js and React for weather forecast application(react-native, firebase)`]                    
+        }],
+        2020: [{
+            title:`The Wallrus`,
+            link:`https://the-wallrus.com//`,
+            subTitle:`Front end developer`,
+            where:`Montreal, QC, Canada`,
+            from:`Oct 2019`,
+            to:`Present`,
+            type:'work',
+            desc: [`Implemented React.js front end features for local clients including Radio Canada`, `Responsible for refactoring on digital signage platform from old JS to React ecosystem `]                    
         }]
+  
     },
 
     skills:{
@@ -160,6 +170,20 @@ const fullDataSet = {
     },
 
     works:{
+        theWallrus:
+        {
+            title:
+            `the wallrus`,
+            desc:
+            `React frontend features on Emergency Service`,
+            skills:
+            `ReactJS`,
+            links:
+            ``,
+            thumbnail:
+            `/images/works/radio_canada.png`
+        },
+
         enm:
         {
             title:

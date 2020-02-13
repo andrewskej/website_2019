@@ -1,5 +1,4 @@
 import React, { Component, createContext } from 'react'
-import data from '../Data/data'
 import fullDataSet from '../Data/fullDataSet'
 
 const Context = createContext();
@@ -22,9 +21,10 @@ class ProfileProvider extends Component {
         },
 
         event: (year) => {
+            const {career} = fullDataSet;
             return (
                 <div className="chrono__items" key={year}>
-                    {data[year].map((career)=>(
+                    {career[year].map((career)=>(
                         <div className="chrono__events" key={career.link}>
                     
                             <div className="chrono__company">
@@ -56,11 +56,8 @@ class ProfileProvider extends Component {
 
 
     componentDidMount(){
-
         const {career, bio, contact, skills, works} = fullDataSet
-        //fullDataSet 으로 바꾸는게 좋을까? 개별 데이터를 가지는게 나을까?
-
-        let yearSet = Object.keys(career).reverse()
+        const yearSet = Object.keys(career).reverse()
         this.setState({ yearSet, contact, career, bio, skills, works })
     }
 
